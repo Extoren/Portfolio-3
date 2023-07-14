@@ -175,6 +175,7 @@ section .title {
   margin-bottom: 60px;
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
+  color: white;
 }
 
 section .title::before {
@@ -231,6 +232,7 @@ section .title::after {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: white;
 }
 
 .about .about-content .right .text span {

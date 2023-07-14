@@ -4,6 +4,10 @@ a {
     font-size: inherit;
     text-decoration: none;
   }
+
+p {
+  color: white;
+}
   
 html {
   scroll-behavior: smooth;
