@@ -355,15 +355,15 @@ section .title::after {
     height: 250px;
     width: 250px;
     margin-bottom: -1200%;
-    transform: translate(-40%, -50%);
+    transform: translate(-15%, -50%);
   }
 
   .about .about-content .right {
     margin-bottom: -600%;
-    transform: translate(-40%, -50%);
+    transform: translate(-15%, -50%);
   }
   .about .title {
-    transform: translate(-40%, -50%);
+    transform: translate(-15%, -50%);
   }
 }
 
