@@ -25,10 +25,12 @@
   /* Remove side scroll, we dont want that exposure*/
   body {
     overflow-x: hidden;
+  }
+  
+  html {
     background-color: black;
     background: black;
   }
-  
 
 html,body{
     margin:0;
