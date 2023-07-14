@@ -593,5 +593,6 @@ section .title::after {
  /* Portfolio section */
 
 #portfolio .max-width {
+  width: 100%;
   height: 1200px;
 }
