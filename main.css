@@ -25,6 +25,8 @@
   /* Remove side scroll, we dont want that exposure*/
   body {
     overflow-x: hidden;
+    background-color: black;
+    background: black;
   }
   
 
