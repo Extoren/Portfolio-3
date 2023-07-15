@@ -506,7 +506,7 @@ section .title::after {
     transform: translate(-28%, -0%);
   }
   .skills .title {
-    margin-left: -30%;
+    
     margin-top: 10%;
   }
 }
@@ -517,7 +517,7 @@ section .title::after {
     transform: translate(-40%, -0%);
   }
   .skills .title {
-    margin-left: -40%;
+   
   }
 }
 
@@ -527,7 +527,7 @@ section .title::after {
     transform: translate(-55%, -0%);
   }
   .skills .title {
-    margin-left: -60%;
+    
     margin-top: 10%;
   }
 }
@@ -538,7 +538,7 @@ section .title::after {
     transform: translate(-70%, -0%);
   }
   .skills .title {
-    margin-left: -70%;
+    
     margin-top: 20%;
   }
 }
@@ -549,7 +549,7 @@ section .title::after {
     transform: translate(-90%, -0%);
   }
   .skills .title {
-    margin-left: -85%;
+    
     margin-top: 20%;
   }
 }
