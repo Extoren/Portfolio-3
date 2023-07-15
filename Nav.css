@@ -295,7 +295,7 @@ html {
         top: 0;
         right: 0;
         padding-right: 15px;
-        transform: translateX(-100%);
+        transform: translateX(-120%);
         width: 100vw;
         height: 100vh;
         -webkit-transition: opacity 0.2s ease-out;
