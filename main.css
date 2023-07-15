@@ -342,7 +342,7 @@ section .title::after {
   }
 
   .about .about-content .right {
-    margin-bottom: -600%;
+    margin-bottom: -500%;
     transform: translate(-10%, -50%);
   }
   .about .title {
