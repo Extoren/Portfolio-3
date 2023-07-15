@@ -48,6 +48,7 @@
     },
     "dependencies": {
         "gsap": "^3.12.2",
-        "particles.js": "^2.0.0"
+        "particles.js": "^2.0.0",
+        "three.js": "^0.77.1"
     }
 }
