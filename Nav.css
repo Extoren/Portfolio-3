@@ -95,22 +95,35 @@ html {
 
   @media(max-width: 1423px) {
     #navbar li a {
-      font-size: 0.9em;
+      font-size: 1.3em;
       padding: 0 0px;
       margin: 0 10px;
     }
   }
 
-  @media(max-width: 818px) {
+  @media(max-width: 974px) {
     #navbar li a {
-      font-size: 0.7em;
+      font-size: 1.1em;
     }
   }
 
-  @media(max-width: 770px) {
+  @media(max-width: 896px) {
     #navbar li a {
-      margin: 0 20px;
+      font-size: 1em;
+    }
+  }
+
+  @media(max-width: 857px) {
+    #navbar li a {
+      margin: 0 7px;
       font-size: 0.9em;
+    }
+  }
+
+  @media(max-width: 768px) {
+    #navbar li a {
+      margin: 0 8px;
+      font-size: 1em;
     }
   }
 
