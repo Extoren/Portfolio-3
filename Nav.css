@@ -106,6 +106,27 @@ html {
       font-size: 0.7em;
     }
   }
+
+  @media(max-width: 770px) {
+    #navbar li a {
+      margin: 0 20px;
+      font-size: 0.9em;
+    }
+  }
+
+  @media(max-width: 725px) {
+    #navbar li a {
+      margin: 0 20px;
+      font-size: 0.8em;
+    }
+  }
+
+  @media(max-width: 695px) {
+    #navbar li a {
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+  }
   
   #navbar li a:hover {
     /* border-bottom: 1px solid rgb(28, 121, 184); */
