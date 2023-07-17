@@ -6,26 +6,420 @@
     <title>Portfolio</title>
     <link rel='stylesheet' href='Nav.css'>
     <link rel='stylesheet' href='Sub.css'>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
-    <div class="a4-page">
-        <a-scene embedded arjs loading-screen="dotsColor: #ffff00">
-            <a-assets>
-                <a-asset-item id="model" src="Portfolio 2.6.glb"></a-asset-item>
-            </a-assets>
-            <a-entity gltf-model="#model"></a-entity>
-            <a-camera></a-camera>
-        </a-scene>
+
+  <div class="a4-page">
+    <div id="canvas-container">
+      <div class="cards">
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/space-invaders-gif-1.gif" alt="Space Invaders" id="fix" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Space Invaders
+                <small>Unity 2D</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/2D platformer.webp" alt="2D platfromer" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                2D Platformer
+                <small>Unity 2D</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Pixel-jul_Max.gif" alt="Pixel animasjon av et tre" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Pixel animasjon
+                <small>Photoshop</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Azure.png" alt="Azure" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Azure
+                <small>Front-/back-end</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Portfolio 1.png" alt="Første Portfolio" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                1. Portfolio
+                <small>HTML, CSS, Adobe Xd</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/shooter.gif" alt="FPS game" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                FPS game
+                <small>Unity 3D</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/CV.png" alt="CV" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                CV
+                <small>Illustrator</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Lyddesign.gif" alt="Lyddesign" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Lyddesign
+                <small>Audition</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Trailer.gif" alt="The cyclops" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                The cyclops
+                <small>Javascript / Blender</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Blender design 2.png" alt="3D model av Oslo Skatehall" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                model av Oslo Skatehall
+                <small>Blender</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Squarespace.png" alt="Squarespace" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Squarespace
+                <small>Front End Utvikling</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Portfolio 2.png" alt="Portfolio 2" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                2. Portfolio
+                <small>Blender, Javascript</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Animation.gif" alt="Animasjon" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                3D Animasjon
+                <small>Blender Audition</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Brosjyre.png" alt="Brosjyre" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Brosjyre
+                <small>Adobe Xd</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__image-holder">
+            <img class="card__image" src="images/Nrk.png" alt="Back-end hacking" />
+          </div>
+          <div class="card-title">
+            <a href="#" class="toggle-info btn">
+              <span class="left"></span>
+              <span class="right"></span>
+            </a>
+            <h2>
+                Hacking
+                <small>Back-end hacking</small>
+            </h2>
+          </div>
+          <div class="card-flap flap1">
+            <div class="card-description">
+              This grid is an attempt to make something nice that works on touch devices. Ignoring hover states when they're not available etc.
+            </div>
+            <div class="card-flap flap2">
+              <div class="card-actions">
+                <a href="#" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      
+      
+      
+      
     </div>
-
-
-
+</div>
 
 
     <div id="particles-js"></div>
 
 
+  
 
 
     <nav id="navbar" class="">
@@ -46,13 +440,11 @@
         </div>
       </nav>
       
-      
       <!-- Menu Icon -->
       <div class="menuIcon">
         <span class="icon icon-bars"></span>
         <span class="icon icon-bars overlay"></span>
       </div>
-      
       
       <div class="overlay-menu">
         <ul id="menu">
@@ -63,8 +455,8 @@
           </ul>
       </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-      <script src="node_modules/particles.js/particles.js"></script>
-      <script src='Sub.js'></script> 
+
+
+    <script src="Sub.js"></script> 
 </body>
 </html>

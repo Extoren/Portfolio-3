@@ -48,7 +48,10 @@
     },
     "dependencies": {
         "gsap": "^3.12.2",
+        "node": "^20.4.0",
         "particles.js": "^2.0.0",
-        "three.js": "^0.77.1"
+        "three": "^0.154.0",
+        "three-gltf-loader": "^1.111.0",
+        "three.js": "^0.77.0"
     }
 }

@@ -1,3 +1,37 @@
+   /*======================================================
+                     Scroller 
+    ======================================================*/
+
+    html {
+        --scrollbarBG: black;
+        --thumbBG: yellow;
+      }
+      body::-webkit-scrollbar {
+        width: 11px;
+      }
+      body {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG) ;
+        border-radius: 6px;
+        border: 3px solid var(--scrollbarBG);
+      }
+    
+      /* Remove side scroll, we dont want that exposure*/
+      body {
+        overflow-x: hidden;
+      }
+
+
+
+
+
+
 body {
     margin: 0;
   }
@@ -5,6 +39,10 @@ body {
   canvas {
     display: block;
     vertical-align: bottom;
+  }
+
+  * {
+    background: black;
   }
   
   /* particles.js container */
@@ -24,12 +62,10 @@ body {
 
 
 
-
-
-
-
-.a4-page {
-    opacity: 0.8;
+ 
+  /* New styles for A4 page */
+  .a4-page {
+    opacity: 0.95;
     position: absolute;
     width: 70%;
     height: 100%; 
@@ -39,6 +75,255 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* colors */
+:root {
+  --black: rgb(8, 8, 8);
+  --lightBG: #dce1df;
+  --salmon: #ff6666;
+  --yellow-teal: yellow;
+  --darkGrey: yellow;
+}
+
+body {
+  background: var(--lightBG);
+  color: var(--darkGrey);
   
- 
+  text-rendering: optimizeLegibility;
+}
+
+a.btn {
+  background: var(--yellow-teal);
+  border-radius: 4px;
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+  color: var(--black);
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.1s 0s ease-out;
+}
+
+.no-touch a.btn:hover {
+  background: lighten(var(--yellow-teal--teal), 2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken(var(--yellow-teal), 2.5);
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.25);
+  transform: translate3d(0, 1px, 0);
+  transition: all 0.025s 0s ease-out;
+}
+
+div.cards {
+  padding-top: 4%;
+  margin: 0px auto;
+  max-width: 1280px; /* Adjusted max-width for four cards per row */
+  text-align: center;
+}
+
+div.card {
+  background: var(--black);
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+div.card img {
+  max-width: 300px;
+}
+
+div.card .card__image-holder {
+    background: rgba(0, 0, 0, 0.1);
+    height: 0;
+    padding-bottom: 75%;
+    position: relative;
+  }
   
+  div.card .card__image-holder img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+div.card .card-title {
+  background: var(--black);
+  padding: 6px 15px 10px;
+  position: relative;
+  z-index: 0;
+}
+
+div.card .card-title a.toggle-info {
+  border-radius: 32px;
+  height: 32px;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  width: 32px;
+}
+
+div.card .card-title a.toggle-info span {
+  background: var(--black);
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 16px;
+  transition: all 0.15s 0s ease-out;
+  width: 12px;
+}
+
+div.card .card-title a.toggle-info span.left {
+  right: 14px;
+  transform: rotate(45deg);
+}
+
+div.card .card-title a.toggle-info span.right {
+  left: 14px;
+  transform: rotate(-45deg);
+}
+
+div.card .card-title h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 0;
+  padding: 0;
+}
+
+div.card .card-title h2 small {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+div.card .card-description {
+  padding: 0 15px 10px;
+  position: relative;
+  font-size: 14px;
+}
+
+div.card .card-actions {
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.075);
+  padding: 10px 15px 20px;
+  text-align: center;
+}
+
+div.card .card-flap {
+  background: darken(var(--white), 15);
+  position: absolute;
+  width: 100%;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+div.card .flap1 {
+  transition: all 0.3s 0.3s ease-out;
+  z-index: -1;
+}
+
+div.card .flap2 {
+  transition: all 0.3s 0s ease-out;
+  z-index: -2;
+}
+
+div.cards.showing div.card {
+  cursor: pointer;
+  opacity: 0.6;
+  transform: scale(0.88);
+}
+
+.no-touch div.cards.showing div.card:hover {
+  opacity: 0.94;
+  transform: scale(0.92);
+}
+
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+div.card.show .card-title a.toggle-info {
+  background: var(--salmon) !important;
+}
+
+div.card.show .card-title a.toggle-info span {
+  top: 15px;
+}
+
+div.card.show .card-title a.toggle-info span.left {
+  right: 10px;
+}
+
+div.card.show .card-title a.toggle-info span.right {
+  left: 10px;
+}
+
+div.card.show .card-flap {
+  background: var(--white);
+  transform: rotateX(0deg);
+}
+
+div.card.show .flap1 {
+  transition: all 0.3s 0s ease-out;
+}
+
+div.card.show .flap2 {
+  transition: all 0.3s 0.2s ease-out;
+}
+
+

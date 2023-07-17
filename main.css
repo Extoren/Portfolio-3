@@ -477,7 +477,7 @@ section .title::after {
 .skills {
   background: linear-gradient(to bottom, rgb(228, 228, 0) 5%, black 10%, black, black 51%, black 60%, black 70%, yellow 110%);
   margin-top: -120px;
-  height: 850px;
+  height: 770px;
   width: 100%;
 }
 
@@ -675,19 +675,107 @@ section .title::after {
   text-align: center;
   font-size: 24pt;
   position: absolute;
-  margin-top: 150px;
+  margin-top: 120px;
   color: white;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
+  transform-origin: center;
+  backface-visibility: hidden;
 }
 
 .portfolio:hover {
   text-decoration: underline;
-  transform: scale(1.09);
+  transform: translateX(-50%) scale(1.09);
 }
 
-@media (max-width: 700px) {
-  .portfolio {
-    left: 28%;
-  }
+
+
+
+
+
+
+
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 30px;
+}
+
+.arrows path {
+  stroke: black;
+  fill: transparent;
+  stroke-width: 2px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
+
+
+
+
+footer {
+  position: sticky;
+  font-size: 12px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14pt;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  text-align: center;
+  opacity: 0.6;
+  border-top: 2px solid white;
+}
+
+footer:hover {
+  opacity: 1;
+}
+
+footer a {
+  text-decoration: none; /* Remove the default underline */
+  color: inherit;
+  border-bottom: 2px solid yellow; /* Change the border color to yellow */
+}
+
+footer a:hover {
+  border-bottom: 1px transparent;
+  text-decoration: underline;
 }
