@@ -699,7 +699,7 @@ section .title::after {
 
 .arrows {
   width: 60px;
-  height: 72px;
+  height: 100px;
   position: absolute;
   left: 50%;
   margin-left: -30px;
@@ -709,7 +709,7 @@ section .title::after {
 .arrows path {
   stroke: black;
   fill: transparent;
-  stroke-width: 2px;  
+  stroke-width: 5px;  
   animation: arrow 2s infinite;
   -webkit-animation: arrow 2s infinite; 
 }
@@ -748,6 +748,53 @@ section .title::after {
 
 
 
+.arrows2 {
+  width: 60px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: -900px;
+}
+
+/* bare for å fjerne det for ipad/tel */
+@media (max-width:1300px) {
+  .arrows2 {
+    visibility: hidden;
+  }
+}
+
+
+.arrows2 path {
+  stroke: yellow;
+  fill: transparent;
+  stroke-width: 5px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+
+
+
+.arrows2 path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows2 path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows2 path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
+
+
+
 
 
 footer {
@@ -779,3 +826,11 @@ footer a:hover {
   border-bottom: 1px transparent;
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
