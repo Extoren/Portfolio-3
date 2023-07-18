@@ -201,3 +201,12 @@ $(document).ready(function(){
     
   });
 });
+
+$(document).ready(function(){
+  $("a.btn").click(function(e){
+    e.preventDefault();
+
+    var url = $(this).attr("href");
+    window.location.href = url;
+  });
+});

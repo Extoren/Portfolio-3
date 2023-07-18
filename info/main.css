@@ -1,0 +1,420 @@
+body {
+    background: black;
+    font-family: inherit;
+}
+
+   /*======================================================
+                     Scroller 
+    ======================================================*/
+
+    html {
+        --scrollbarBG: black;
+        --thumbBG: yellow;
+      }
+      body::-webkit-scrollbar {
+        width: 11px;
+      }
+      body {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG) ;
+        border-radius: 6px;
+        border: 3px solid var(--scrollbarBG);
+      }
+    
+      /* Remove side scroll, we dont want that exposure*/
+      body {
+        overflow-x: hidden;
+      }
+
+
+
+      #myBox-2 {
+        position: absolute;
+        top: 67%;
+        left: 50%;
+        width: 80%;
+        height: 30%;
+        background-color: #101010;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 50px;
+        border: 4px solid rgba(164, 164, 164, 0.648);
+        transform: translate(-50%, -50%);
+        color: yellow;
+        font-size: 18pt;
+        display: flex;
+      }
+
+      #myBox-3 {
+        position: absolute;
+        top: 145%;
+        left: 50%;
+        width: 80%;
+        height: 30%;
+        background-color: #101010;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 50px;
+        border: 4px solid rgba(164, 164, 164, 0.648);
+        transform: translate(-50%, -50%);
+        color: yellow;
+        font-size: 18pt;
+        display: flex;
+      }
+
+      @media (max-width:768px) {
+        #myBox-3 {
+            top: 170%;
+            transform: translate(-50%, 70%);
+          }
+          #myBox-2 {
+            height: 31%;
+          }
+      }
+
+      .wrapped-text {
+        width: 90%; /* Adjust the width as per your preference */
+        margin: 40px auto; /* Centers the text within the box */
+        word-wrap: break-word; /* Forces the text to wrap to a new line */
+      }
+      
+      h3 {
+        color:white;
+        font-size: 13pt;
+        margin-top: 50px;
+        text-align: left;
+    }
+
+    @media (max-width:900px) {
+        h3 {
+            font-size: 12pt;
+        }
+    }
+
+    @media (max-width:700px) {
+        h3 {
+            font-size: 11pt;
+        }
+    }
+
+    @media (max-width:600px) {
+        h3 {
+            font-size: 10pt;
+        }
+    }
+
+    @media (max-width:600px) {
+        h3 {
+            font-size: 8.8pt;
+        }
+    }
+      
+      #myBox {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        width: 80%;
+        height: 20%;
+        background-color: #101010;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 50px;
+        border: 4px solid rgba(164, 164, 164, 0.648);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: yellow;
+        font-size: 18pt;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .box {
+        flex: 1;
+        height: 100px; /* Adjust the height as needed */
+        background: none;
+        margin: 20px 20px; /* Adjust the horizontal margin as needed */
+        width: calc((100% - 40px) / 3); /* Calculate the width for each box */
+      }
+      
+      @media (max-width: 768px) {
+        /* Adjust the height for smaller screens */
+        .box {
+          height: 75px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        /* Adjust the height for even smaller screens */
+        .box {
+          height: 80px;
+        }
+      }
+      
+      .box img {
+        max-width: 100%; /* Adjust the desired maximum width */
+        max-height: 100%; /* Adjust the desired maximum height */
+        width: auto;
+        height: auto;
+        object-fit: contain; /* Maintain aspect ratio and fit within the container */
+      }
+      
+      .box figcaption {
+        font-size: 14pt; /* Adjust the desired font size */
+        color: white; /* Adjust the desired font color */
+        text-align: center; /* Adjust the desired text alignment */
+        margin-top: 5px; /* Adjust the desired margin between the image and under-text */
+      }
+
+       
+h2 {
+    position: absolute;
+    font-size: 20pt;
+    background: none;
+    color: yellow;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top:-1%;
+}
+
+      
+h4 {
+    font-size: 19pt;
+}
+
+@media (max-width:805px) {
+    h4 {
+        font-size: 18pt;
+    }
+}
+@media (max-width:500px) {
+    h4 {
+        font-size: 16pt;
+    }
+}
+      
+
+     /* New styles for A4 page */
+  .a4-page {
+    opacity: 0.95;
+    position: absolute;
+    width: 80%;
+    height: 100%; 
+    background-color: rgb(12, 12, 12);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.a4-page-2 {
+    opacity: 0.95;
+    position: absolute;
+    width: 80%;
+    height: 100%; 
+    background-color: rgb(12, 12, 12);
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .a4-page-2 {
+        top: 150%;
+        height: 150%; 
+    }
+}
+
+h1 {
+    position: absolute;
+    font-size: 40pt;
+    background: none;
+    color: white;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 15%;
+    text-align: center;
+}
+
+
+
+
+
+#canvas {
+    position: fixed;
+}
+
+
+
+
+
+
+.new-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 778px; /* Adjust the margin-top value as needed */
+}
+
+.new-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 200px;
+    background-color: #101010;
+    border: 4px solid rgba(164, 164, 164, 0.648);
+    color: yellow;
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 22px; /* Adjust the margin-top value as needed */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 50px;
+}
+
+.new-box-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 400px;
+    background-color: #101010;
+    border: 4px solid rgba(164, 164, 164, 0.648);
+    color: yellow;
+    font-size: 18pt;
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin-top value as needed */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 50px;
+}
+
+.new-box-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 185px;
+    background-color: #101010;
+    border: 4px solid rgba(164, 164, 164, 0.648);
+    color: yellow;
+    font-size: 18pt;
+    text-align: center;
+    margin-top: -190px; /* Adjust the margin-top value as needed */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 50px;
+}
+
+.new-box-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 185px;
+    background-color: #101010;
+    border: 4px solid rgba(164, 164, 164, 0.648);
+    color: yellow;
+    font-size: 18pt;
+    text-align: center;
+    margin-top: -190px; /* Adjust the margin-top value as needed */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 50px;
+}
+
+
+.new-box-2 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.new-box img {
+    max-width: 20%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width:1000px) {
+    .new-box img {
+        max-width: 50%;
+        max-height: 90%;
+    }
+}
+
+@media (max-width:900px) {
+    .new-box img {
+        max-width: 40%;
+        max-height: 90%;
+    }
+}
+
+@media (max-width:500px) {
+    .new-box img {
+        max-width: 60%;
+        max-height: 90%;
+        margin-top: 40%;
+        
+    }
+    .new-box figcaption {
+        margin-bottom: 50%;
+    }
+}
+
+.new-box-3 img {
+    max-width: 20%;
+    max-height: 40%;
+    object-fit: contain;
+}
+
+.new-box figcaption,
+.new-box-2 figcaption,
+.new-box-3 figcaption {
+    font-size: 14pt;
+    color: white;
+    margin-top: 5px;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+    .new-box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .new-box,
+    .new-box-2,
+    .new-box-3 {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .new-box-2 {
+        height: 300px;
+    }
+
+    .new-box-3 {
+        margin-top: 20px;
+    }
+}
