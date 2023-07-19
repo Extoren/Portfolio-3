@@ -1,18 +1,52 @@
+const title = document.querySelector("h1");
+const CHAR_TIME = 30;
+
+let text, index;
+
+function requestCharAnimation(char, value) {
+  setTimeout(function() {
+    char.textContent = value;
+    char.classList.add("fade-in");
+  }, CHAR_TIME);
+}
+
+function addChar() {
+  const char = document.createElement("span");
+  char.classList.add("char");
+  char.textContent = "▌";
+  title.appendChild(char);
+  requestCharAnimation(char, text.substr(index++, 1));
+  if (index < text.length) {
+    requestChar();
+  }
+}
+
+function requestChar(delay = 0) {
+  setTimeout(addChar, CHAR_TIME + delay);
+}
+
+function start() {
+  index = 0;
+  text = title.textContent.trim();
+  title.textContent = "";
+  requestChar(1000);
+}
+
+start();
+
+
+
+
+
+
+
+
 let resizeReset = function() {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;
 }
 
-const opts = { 
-	particleColor: "#ffff00",
-	lineColor: "rgb(255,255,0)",
-	particleAmount: 30,
-	defaultSpeed: 1,
-	variantSpeed: 1,
-	defaultRadius: 2,
-	variantRadius: 2,
-	linkRadius: 200,
-};
+
 
 window.addEventListener("resize", function(){
 	deBouncer();
@@ -109,40 +143,3 @@ let delay = 200, tid,
 rgb = opts.lineColor.match(/\d+/g);
 resizeReset();
 setup();
-
-
-
-
-
-
-
-
-
-
-
-// added for Nav Overlay Menu
-
-let menuIcon = document.querySelector('.menuIcon');
-let nav = document.querySelector('.overlay-menu');
-
-menuIcon.addEventListener('click', () => {
-  if (nav.style.transform != 'translateX(0%)') {
-      nav.style.transform = 'translateX(0%)';
-      nav.style.transition = 'transform 0.2s ease-out';
-  } else { 
-      nav.style.transform = 'translateX(-100%)';
-      nav.style.transition = 'transform 0.2s ease-out';
-  }
-});
-
-
-// Toggle Menu Icon ========================================
-let toggleIcon = document.querySelector('.menuIcon');
-
-toggleIcon.addEventListener('click', () => {
-  if (toggleIcon.className != 'menuIcon toggle') {
-      toggleIcon.className += ' toggle';
-  } else {
-      toggleIcon.className = 'menuIcon';
-  }
-});

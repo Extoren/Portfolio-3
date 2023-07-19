@@ -2,110 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.75">
-    <title>1_SpaceInvaders</title>
-    <link rel="stylesheet" href="../Nav.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceInvaders</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+      html {
+    --scrollbarBG: black;
+    --thumbBG: rgb(0,255,0); /* Change accordingly */
+    }
+    body::-webkit-scrollbar {
+      width: 11px;
+    }
+    body {
+      scrollbar-width: thin;
+      scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+      background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: var(--thumbBG) ;
+      border-radius: 6px;
+      border: 3px solid var(--scrollbarBG);
+    }
+
+  /* Remove side scroll, we dont want that exposure*/
+  body {
+    overflow-x: hidden;
+  }
+    .char {
+    color: rgb(0,255,0); /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 4rem rgb(0,255,0); /* Change accordingly */
+    }
+
+    .char.fade-in {
+    color: rgb(0,255,0); /* Change accordingly */
+    transition: color ease-out .3s, text-shadow ease-out .3s;
+    text-shadow: 0 0 1rem rgb(0,255,0); /* Change accordingly */
+    }
+
+    .flexbox--small {
+    background-color: rgb(11, 11, 11);
+    border: 3px solid rgb(0, 125, 0); /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium {
+    /* Increase the default flexbox size */
+    flex: 2 2 30em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid rgb(0, 125, 0); /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    .flexbox--big {
+    /* Increase the default flexbox size */
+    flex: 1 1 40em;
+    background-color: rgb(11, 11, 11);
+    border: 3px solid rgb(0, 125, 0); /* Change accordingly */
+    color: white; /* Change accordingly */
+    }
+
+    h3 {
+        font-size: 20pt;
+        color: rgb(0, 255, 0); /* Change accordingly */
+    }
+    .flexbox--big {
+      flex-direction: column;
+    }
+    #column {
+        flex-direction: column;
+    }
+    .navbar {
+        position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    background:none;
+    height: 60px;
+    padding: 0 10px;
+    z-index: 9999; /* Set a higher z-index value if needed */
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar-arrow {
+        width: 20px;
+        height: 20px;
+        background-color: rgb(0, 255, 0);
+        transform: rotate(45deg);
+        margin-right: 10px;
+    }
+
+    .navbar-text {
+        color: rgb(0, 255, 0);
+        font-weight: bold;
+    }
+    </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a href="/portfolio.html"><div class="navbar-arrow"></div></a>
+        <a href="/portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
+    </nav>
+    <!-- Header -->
+    <h1>Space Invaders</h1>
+    <!-- Particles -->
     <canvas id="canvas"></canvas>
+    <!-- A4 page background -->
     <div class="a4-page">
-        <h1>Space Invaders</h1>
-        <div id="myBox">
-            <h2>Brukt:</h2>
-            <div class="box">
-              <img src="Logos/C sharp.png" alt="C sharp logo">
-              <figcaption>C#</figcaption>
-            </div>
-            <div class="box">
-              <img src="Logos/Unity Logo.png" alt="Unity Logo">
-              <figcaption>Unity</figcaption>
-            </div>
-          </div>   
-
-          <div id="myBox-2">
-            <div class="text">
-              <h2>Info</h2>
-              <h3 class="wrapped-text">
+        <!-- Boxes -->
+        <div class="container">
+            <div class="flexboxes">
+            <div class="flexbox flexbox--big">
+                <h3 class="header-text">Oversikt</h3>
                 Jeg hadde gleden av å gjennomføre mitt første selvstendige prosjekt med Unity, 
                 et anerkjent og kraftig spillutviklingsverktøy. Hensikten med prosjektet var å 
                 utforske mulighetene for å utvikle 2D-spill i Unity, og det representerte en spennende og lærerik reise for meg.
                 Underveis i prosessen fikk jeg en unik anledning til å utforske de grunnleggende aspektene ved Unity, inkludert 
                 bruken av C#, et kraftig programmeringsspråk som benyttes innenfor Unity-miljøet. Gjennom å utnytte disse verktøyene, 
                 fikk jeg oppleve hvordan de ulike elementene i Unity kan samarbeide for å skape et velstrukturert og engasjerende 2D-spill.
-              </h3>
+            </div>  
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Ressurser</h3>
+                <div class="image-container">
+                  <img src="Logos/C sharp.png" alt="C Sharp logo" style="max-width: 200px;">
+                  <img src="Logos/Unity Logo.png" alt="Unity Logo" style="max-width: 200px;">
+                </div>
+              </div>                       
+            <div class="flexbox flexbox--medium" id="column">
+                <h3 class="header-text">Samarbeidspartnere</h3> 
+                Ingen
             </div>
-          </div>
-          
-          
-          
-          
-          
-          <div class="new-box-container">
-            <div class="new-box">
-                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rB5y2cCNf5kw2FeF?e=BO1nZP" target="_blank"><img src="Logos/PowerPoint.png" alt="Logg for Space Invaders"></a>
-                <figcaption>Logg</figcaption>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Logg</h3> 
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rB5y2cCNf5kw2FeF?e=BO1nZP" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
             </div>
-            
-            <div class="new-box-2">
-                <h4>Samarbeidspartnere</h4>
-                <figcaption>Ingen</figcaption>
+            <div class="flexbox flexbox--small" id="column">
+                <h3 class="header-text">Status</h3> 
+                <img src="Logos/Complete.png" alt="Komplett" style="max-width: 110px;">
+                Komplett
             </div>
-
-            <div class="new-box-3">
-                <h4>Status</h4>
-                <img src="Logos/Complete.png" alt="ferdig">
+            <div class="flexbox flexbox--big" id="column">
+                <h3 class="header-text">Resultat</h3> 
+                <img src="Logos/Sad_Green.png" alt="Komplett" style="max-width: 110px;">
+                Ikke tilgjengelig
             </div>
-            
+            </div>
         </div>
-        <div id="myBox-3">
-            <div class="text">
-              <h2>Resultat</h2>
-              <h4></h4>
-                
-              </h3>
-            </div>
-          </div>
     </div>
 
-
-    
-    <div class="a4-page-2"></div>
-
-
-    <nav id="navbar" class="">
-        <div class="nav-wrapper">
-          <!-- Navbar Logo -->
-          <div class="logo">
-            <!-- Logo Placeholder for Inlustration -->
-            <a href="#home"><i class="fa fa-angellist"></i> Max Aarre</a>
-          </div>
-      
-          <!-- Navbar Links -->
-          <ul id="menu">
-            <li><a href="../index.html#home">Hjem</a></li><!--
-         --><li><a href="../index.html#about">Om meg</a></li><!--
-         --><li><a href="../index.html#skills">Erfaring</a></li><!--
-         --><li><a href="../portfolio.html">Portfolio</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      <!-- Menu Icon -->
-      <div class="menuIcon">
-        <span class="icon icon-bars"></span>
-        <span class="icon icon-bars overlay"></span>
-      </div>
-      
-      <div class="overlay-menu">
-        <ul id="menu">
-            <li><a href="../index.html#home">Hjem</a></li>
-            <li><a href="../index.html#about">Om meg</a></li>
-            <li><a href="../index.html#skills">ferdigheter</a></li>
-            <li><a href="../portfolio.html">Portfolio</a></li>
-          </ul>
-      </div>
-
-      <script src="info.js"></script> 
+    <script>
+    const opts = { 
+        particleColor:  "#00ff00", // Change accordingly
+        lineColor: "rgb(0,255,0)", // Change accordingly
+        particleAmount: 30,
+        defaultSpeed: 1,
+        variantSpeed: 1,
+        defaultRadius: 2,
+        variantRadius: 2,
+        linkRadius: 200,
+    };
+    </script>
+    <script src="info.js"></script> 
 </body>
 </html>

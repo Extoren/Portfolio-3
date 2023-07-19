@@ -1,3 +1,4 @@
+
 /* ---- particles.js config ---- */
 
 particlesJS("particles-js", {
@@ -10,7 +11,7 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#ffff00"
+      "value": "#ffff00" //color
     },
     // How it looks
     "shape": {
@@ -210,3 +211,6 @@ $(document).ready(function(){
     window.location.href = url;
   });
 });
+
+
+

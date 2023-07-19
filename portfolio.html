@@ -9,6 +9,38 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <style>
+      #Green {
+        color: rgb(0, 255, 0);
+      }
+      #GreenB {
+        background-color: rgb(0, 255, 0);
+      }
+      #Blue {
+        color: rgb(0, 136, 220);
+      }
+      #BlueB {
+        background-color: rgb(0, 136, 220);
+      }
+      #Red {
+        color: rgb(255, 0, 0);
+      }
+      #RedB {
+        background-color: rgb(255, 0, 0);
+      }
+      #LightBlue {
+        color: rgb(0, 255, 225);
+      }
+      #LightBlueB {
+        background-color: rgb(0, 255, 225);
+      }
+      #White {
+        color:white;
+      }
+      #WhiteB {
+        background-color: white;
+      }
+    </style>
 </head>
 <body>
 
@@ -21,22 +53,22 @@
             <img class="card__image" src="images/space-invaders-gif-1.gif" alt="Space Invaders" id="fix" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="GreenB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="Green">
                 Space Invaders
                 <small>Unity 2D</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="Green">
               Første spill laget i Unity, gjennom en Tutorial.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="info/1_SpaceInvaders.html" class="btn">Les mer</a>
+                <a href="info/1_SpaceInvaders.html" class="btn" id="GreenB" >Les mer</a>
               </div>
             </div>
           </div>
@@ -47,22 +79,22 @@
             <img class="card__image" src="images/2D platformer.webp" alt="2D platfromer" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="BlueB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="Blue">
                 2D Platformer
                 <small>Unity 2D</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="Blue">
               Andre spill laget i Unity, gjennom en Tutorial.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mere</a>
+                <a href="#" class="btn" id="BlueB">Les mer</a>
               </div>
             </div>
           </div>
@@ -73,22 +105,22 @@
             <img class="card__image" src="images/Pixel-jul_Max.gif" alt="Pixel animasjon av et tre" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="RedB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="Red">
                 Pixel animasjon
                 <small>Photoshop</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="Red">
               (Klasse prosjekt) Jule pixel animasjon, laget med Photshop timeline.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="RedB">Les mer</a>
               </div>
             </div>
           </div>
@@ -99,22 +131,22 @@
             <img class="card__image" src="images/Azure.png" alt="Azure" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="LightBlueB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="LightBlue">
                 Azure
                 <small>Front-/Back-end</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="LightBlue">
               Forståelse av Azure gjennom kurs og prøving.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="LightBlueB">Les mer</a>
               </div>
             </div>
           </div>
@@ -177,22 +209,22 @@
             <img class="card__image" src="images/CV.png" alt="CV" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="WhiteB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="White">
                 CV
                 <small>Illustrator</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="White">
               (Klasse prosjekt) CV laget med Adobe Illustrator.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="WhiteB">Les mer</a>
               </div>
             </div>
           </div>
@@ -203,22 +235,22 @@
             <img class="card__image" src="images/Lyddesign.gif" alt="Lyddesign" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="RedB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="Red">
                 Lyddesign
                 <small>Audition</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="Red">
               (Klasse prosjekt) Lyddesign med Adobe Audition.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="RedB">Les mer</a>
               </div>
             </div>
           </div>
@@ -229,22 +261,22 @@
             <img class="card__image" src="images/Trailer.gif" alt="The cyclops" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="RedB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="Red">
                 The cyclops
                 <small>Javascript / Blender</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="Red">
               (Klasse prosjekt) Interaktiv historie programmert i Blender og kodet i Visual Studio Code
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="RedB">Les mer</a>
               </div>
             </div>
           </div>
@@ -255,22 +287,22 @@
             <img class="card__image" src="images/Blender design 2.png" alt="3D modell av Oslo Skatehall" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="WhiteB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="White">
                 modell av Oslo Skatehall
                 <small>Blender</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="White">
               Laget for Oslo Skatehall praksis uke.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="WhiteB">Les mer</a>
               </div>
             </div>
           </div>
@@ -281,22 +313,22 @@
             <img class="card__image" src="images/Squarespace.png" alt="Squarespace" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="WhiteB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="White">
                 Squarespace
                 <small>Front End Utvikling</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="White">
               Praksis uke med Oslo Skatehall.
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="WhiteB">Les mer</a>
               </div>
             </div>
           </div>
@@ -359,22 +391,22 @@
             <img class="card__image" src="images/Brosjyre.png" alt="Brosjyre" />
           </div>
           <div class="card-title">
-            <a href="#" class="toggle-info btn">
+            <a href="#" class="toggle-info btn" id="LightBlueB">
               <span class="left"></span>
               <span class="right"></span>
             </a>
-            <h2>
+            <h2 id="LightBlue">
                 Brosjyre
                 <small>Adobe Xd</small>
             </h2>
           </div>
           <div class="card-flap flap1">
-            <div class="card-description">
+            <div class="card-description" id="LightBlue">
               (Naturfag prosjekt) Bli kjent med Adobe Xd
             </div>
             <div class="card-flap flap2">
               <div class="card-actions">
-                <a href="#" class="btn">Les mer</a>
+                <a href="#" class="btn" id="LightBlueB">Les mer</a>
               </div>
             </div>
           </div>
