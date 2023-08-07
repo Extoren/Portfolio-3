@@ -8,7 +8,7 @@
     <style>
       html {
     --scrollbarBG: black;
-    --thumbBG: rgb(0, 136, 220); /* Change accordingly */
+    --thumbBG: yellow; /* Change accordingly */
     }
     body::-webkit-scrollbar {
       width: 11px;
@@ -31,20 +31,20 @@
     overflow-x: hidden;
   }
     .char {
-    color: rgb(0, 136, 220); /* Change accordingly */
+    color: yellow; /* Change accordingly */
     transition: color ease-out .3s, text-shadow ease-out .3s;
-    text-shadow: 0 0 4rem rgb(0, 136, 220); /* Change accordingly */
+    text-shadow: 0 0 4rem yellow; /* Change accordingly */
     }
 
     .char.fade-in {
-    color: rgb(0, 136, 220); /* Change accordingly */
+    color: yellow; /* Change accordingly */
     transition: color ease-out .3s, text-shadow ease-out .3s;
-    text-shadow: 0 0 1rem rgb(0, 136, 220); /* Change accordingly */
+    text-shadow: 0 0 1rem yellow; /* Change accordingly */
     }
 
     .flexbox--small {
     background-color: rgb(11, 11, 11);
-    border: 3px solid rgb(0, 136, 220); /* Change accordingly */
+    border: 3px solid yellow; /* Change accordingly */
     color: white; /* Change accordingly */
     }
 
@@ -52,32 +52,49 @@
     /* Increase the default flexbox size */
     flex: 2 2 30em;
     background-color: rgb(11, 11, 11);
-    border: 3px solid rgb(0, 136, 220); /* Change accordingly */
+    border: 3px solid yellow; /* Change accordingly */
     color: white; /* Change accordingly */
+    }
+
+    .flexbox--medium a {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: yellow;
+        text-decoration-style: solid;
+        text-decoration-thickness: 3px;
     }
 
     .flexbox--big {
     /* Increase the default flexbox size */
     flex: 1 1 40em;
     background-color: rgb(11, 11, 11);
-    border: 3px solid rgb(0, 136, 220); /* Change accordingly */
+    border: 3px solid yellow; /* Change accordingly */
     color: white; /* Change accordingly */
     }
 
     h3 {
         font-size: 20pt;
-        color: rgb(0, 136, 220); /* Change accordingly */
+        color: yellow; /* Change accordingly */
     }
     .flexbox--big {
       flex-direction: column;
     }
     .flexbox--big a {
       text-decoration: none;
-      color: rgb(0, 136, 220); /* Change accordingly */
+      color: yellow; /* Change accordingly */
     }
     #column {
         flex-direction: column;
     }
+
+    
+
+    @media (max-width:500px) {
+      #column .image-container {
+      transform: translate(20%, -00%);
+    }
+    }
+
     .navbar {
         position: fixed;
     top: 0;
@@ -97,13 +114,13 @@
     .navbar-arrow {
         width: 20px;
         height: 20px;
-        background-color: rgb(0, 136, 220);
+        background-color: yellow;
         transform: rotate(45deg);
         margin-right: 10px;
     }
 
     .navbar-text {
-        color: rgb(0, 136, 220);
+        color: rgb(255, 255, 0);
         font-weight: bold;
     }
     </style>
@@ -114,7 +131,7 @@
         <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
     </nav>
     <!-- Header -->
-    <h1>2D Platformer</h1>
+    <h1>FPS Game</h1>
     <!-- Particles -->
     <canvas id="canvas"></canvas>
     <!-- A4 page background -->
@@ -124,32 +141,31 @@
             <div class="flexboxes">
             <div class="flexbox flexbox--big">
                 <h3 class="header-text">Oversikt</h3>
-                Dette var mitt andre prosjekt med Unity, for å bli bedre kjent. 
+                ...
             </div>  
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Ressurser</h3>
                 <div class="image-container">
-                  <img src="Logos/C sharp.png" alt="C Sharp logo" style="max-width: 200px;">
-                  <img src="Logos/Unity Logo.png" alt="Unity Logo" style="max-width: 200px;">
+                    <img src="Logos/C sharp.png" alt="C Sharp logo" style="max-width: 150px;">
+                    <img src="Logos/Unity Logo.png" alt="Unity Logo" style="max-width: 150px;">
                 </div>
               </div>                       
             <div class="flexbox flexbox--medium" id="column">
                 <h3 class="header-text">Samarbeidspartnere</h3> 
-                Ingen
+               ingen
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Logg</h3> 
-                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rCCXhRySbSVloo9x?e=UdhhYc" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rERMFo7icC96a0_6?e=bouIYJ" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Status</h3> 
-                <img src="Logos/Complete_Blue.png" alt="Komplett" style="max-width: 110px;">
-                Komplett
+                <img src="Logos/Pending_Yellow.png" alt="Komplett" style="max-width: 110px;">
+                Fortsatt i Utvikling
             </div>
             <div class="flexbox flexbox--big" id="column">
                 <h3 class="header-text">Resultat</h3> 
-                link:
-                <a href="https://extoren.itch.io/2d-platformer" target="_blank">Itch.io</a>
+                Ikke tilgjengelig
             </div>
             </div>
         </div>
@@ -157,8 +173,8 @@
 
     <script>
     const opts = { 
-        particleColor:  "#0000ff", // Change accordingly
-        lineColor: "rgb(0, 136, 220);", // Change accordingly
+        particleColor:  "#ffff00", // Change accordingly
+        lineColor: "rgb(255, 255, 0);", // Change accordingly
         particleAmount: 30,
         defaultSpeed: 1,
         variantSpeed: 1,
