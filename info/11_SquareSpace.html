@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azure</title>
+    <title>Squarespace</title>
     <link rel="stylesheet" href="main.css">
     <style>
       html {
     --scrollbarBG: black;
-    --thumbBG: rgb(0, 255, 225); /* Change accordingly */
+    --thumbBG: white; /* Change accordingly */
     }
     body::-webkit-scrollbar {
       width: 11px;
@@ -31,20 +31,20 @@
     overflow-x: hidden;
   }
     .char {
-    color: rgb(0, 255, 225); /* Change accordingly */
+    color: white; /* Change accordingly */
     transition: color ease-out .3s, text-shadow ease-out .3s;
-    text-shadow: 0 0 4rem rgb(0, 255, 225); /* Change accordingly */
+    text-shadow: 0 0 4rem white; /* Change accordingly */
     }
 
     .char.fade-in {
-    color: rgb(0, 255, 225); /* Change accordingly */
+    color: white; /* Change accordingly */
     transition: color ease-out .3s, text-shadow ease-out .3s;
-    text-shadow: 0 0 1rem rgb(0, 255, 225); /* Change accordingly */
+    text-shadow: 0 0 1rem white; /* Change accordingly */
     }
 
     .flexbox--small {
     background-color: rgb(11, 11, 11);
-    border: 3px solid rgb(0, 255, 225); /* Change accordingly */
+    border: 3px solid white; /* Change accordingly */
     color: white; /* Change accordingly */
     }
 
@@ -52,14 +52,14 @@
     /* Increase the default flexbox size */
     flex: 2 2 30em;
     background-color: rgb(11, 11, 11);
-    border: 3px solid rgb(0, 255, 225); /* Change accordingly */
+    border: 3px solid white; /* Change accordingly */
     color: white; /* Change accordingly */
     }
 
     .flexbox--medium a {
         color: white;
         text-decoration: underline;
-        text-decoration-color: rgb(0, 255, 225);;
+        text-decoration-color: white;
         text-decoration-style: solid;
         text-decoration-thickness: 3px;
     }
@@ -68,24 +68,33 @@
     /* Increase the default flexbox size */
     flex: 1 1 40em;
     background-color: rgb(11, 11, 11);
-    border: 3px solid rgb(0, 255, 225); /* Change accordingly */
+    border: 3px solid white; /* Change accordingly */
     color: white; /* Change accordingly */
     }
 
     h3 {
         font-size: 20pt;
-        color: rgb(0, 255, 225); /* Change accordingly */
+        color: white; /* Change accordingly */
     }
     .flexbox--big {
       flex-direction: column;
     }
     .flexbox--big a {
       text-decoration: none;
-      color: rgb(0, 255, 225); /* Change accordingly */
+      color: white; /* Change accordingly */
     }
     #column {
         flex-direction: column;
     }
+
+    
+
+    @media (max-width:500px) {
+      #column .image-container {
+      transform: translate(20%, -00%);
+    }
+    }
+
     .navbar {
         position: fixed;
     top: 0;
@@ -105,13 +114,13 @@
     .navbar-arrow {
         width: 20px;
         height: 20px;
-        background-color: rgb(0, 255, 225);
+        background-color: white;
         transform: rotate(45deg);
         margin-right: 10px;
     }
 
     .navbar-text {
-        color: rgb(0, 255, 225);
+        color: rgb(255, 255, 255);
         font-weight: bold;
     }
     </style>
@@ -122,7 +131,7 @@
         <a href="../portfolio.html"><div class="navbar-text">Gå Tilbake</div></a>
     </nav>
     <!-- Header -->
-    <h1>Azure</h1>
+    <h1>Squarespace</h1>
     <!-- Particles -->
     <canvas id="canvas"></canvas>
     <!-- A4 page background -->
@@ -132,38 +141,38 @@
             <div class="flexboxes">
             <div class="flexbox flexbox--big">
                 <h3 class="header-text">Oversikt</h3>
-                Dette kurset vil gi meg en unik mulighet til å utvide min forståelse 
-                av hvordan Microsoft Azure fungerer i både praktisk anvendelse og teoretiske konsepter. 
-                Jeg ser frem til å fordype meg i ulike aspekter av Azure-plattformen gjennom en omfattende 
-                læreplan som er designet for å bygge opp mitt fundament innenfor dette området.
-
-                Gjennom kurset vil jeg bli introdusert for grunnleggende elementer av Azure-økosystemet, 
-                og jeg vil få muligheten til å praktisk utforske ulike tjenester og verktøy som tilbys.
-                 Samtidig vil jeg også få innsikt i teoretiske prinsipper som ligger til grunn for plattformens 
-                 funksjonalitet. Dette vil hjelpe meg med å forstå ikke bare hva jeg gjør i praksis, men også hvorfor det fungerer slik det gjør.
+                Dette prosjektet var det hovedfokus under vår praksisuke, 
+                hvor vi dedikerte betydelig tid og innsats. Vår tilnærming 
+                til å realisere dette prosjektet involverte bruk av plattformen Squarespace, 
+                som viste seg å være et avgjørende verktøy i prosjektgjennomføringen. 
+                Gjennom nøye utforskning og utnyttelse av Squarespace's funksjonaliteter 
+                og tilpasningsmuligheter, formet vi en nettbasert tilstedeværelse 
+                som matchet vårt mål og visjon for prosjektet på en presis måte.
             </div>  
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Ressurser</h3>
                 <div class="image-container">
-                  <img src="Logos/Azure.png" alt="Adobe Photoshop Logo" style="max-width: 200px;">
+                    <img src="Logos/Squarespace.png" alt="Squarespace logo" style="max-width: 150px;">
                 </div>
               </div>                       
             <div class="flexbox flexbox--medium" id="column">
                 <h3 class="header-text">Samarbeidspartnere</h3> 
-                Kurs leder: <a href="https://no.linkedin.com/in/haidar-nuri-4b414b1a0">Haider Nuri</a>
+               Arbeidsgiver: <a href="https://www.linkedin.com/in/stian-linnes-42183b94/?originalSubdomain=no">Stian Linnes</a>
+               Deltagere: anonyme
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Logg</h3> 
-                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rED-rYLyUtOiVt05?e=xRibPJ" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
+                <a href="https://1drv.ms/p/s!Ah7t9WkkiO66rE7WXVC5uW8cZHhm?e=jEumq6" target="_blank"><img src="Logos/PowerPoint.png" alt="PowerPoint Logg" style="max-width: 150px;"></a>
             </div>
             <div class="flexbox flexbox--small" id="column">
                 <h3 class="header-text">Status</h3> 
-                <img src="Logos/Complete_Cyan.png" alt="Komplett" style="max-width: 110px;">
+                <img src="Logos/Complete_White.png" alt="Komplett" style="max-width: 110px;">
                 Komplett
             </div>
             <div class="flexbox flexbox--big" id="column">
                 <h3 class="header-text">Resultat</h3> 
-                Kun lærdom i praksis
+                Link: <br>
+                <a href="https://osloskatehall.squarespace.com/" target="_blank">Oslo Skatehall nettside</a>
             </div>
             </div>
         </div>
@@ -171,8 +180,8 @@
 
     <script>
     const opts = { 
-        particleColor:  "#00FFE1", // Change accordingly
-        lineColor: "rgb(0, 255, 225);", // Change accordingly
+        particleColor:  "#ffffff", // Change accordingly
+        lineColor: "rgb(255, 255, 255);", // Change accordingly
         particleAmount: 30,
         defaultSpeed: 1,
         variantSpeed: 1,
