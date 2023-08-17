@@ -6,6 +6,38 @@
     <link rel='stylesheet' href='main.css'>
     <link rel='stylesheet' href='Nav.css'>
     <title>Portfolio</title>
+    <style>
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: black;
+        padding: 50px 50px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        border-radius: 20%;
+        text-align: center;
+      }
+      #closePopup {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: yellow;
+        border: none;
+        padding: 10px 10px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 50%;
+        text-align: center;
+      }
+      #white {
+        border-color: white;
+        color: white;
+      }
+    </style>
 </head>
 
 <body>
@@ -55,7 +87,14 @@
                       og jeg setter pris på nye ideer, tanker og konstruktiv kritikk som kan hjelpe meg med å forbedre mine 
                       ferdigheter.
                     </p>
-                    <a href="https://portfoliomax.z1.web.core.windows.net/CV.pdf" target="_blank">Last ned CV</a>
+                    <a id="openPopup">Last ned CV</a>
+
+                    <div class="popup" id="popup">
+                      <p>Velg CV Design</p>
+                      <a href="images/CV_Custom.pdf" target="_blank">Gul og Svart</a><br>
+                      <a href="images/CV_Normal.pdf" id="white" target="_blank">Hvitt og Svart</a>
+                      <button id="closePopup">Lukk</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -77,6 +116,19 @@
         
     </section>
 
+    <script>
+      const openPopupButton = document.getElementById("openPopup");
+      const popup = document.getElementById("popup");
+      const closePopupButton = document.getElementById("closePopup");
+    
+      openPopupButton.addEventListener("click", () => {
+        popup.style.display = "block";
+      });
+    
+      closePopupButton.addEventListener("click", () => {
+        popup.style.display = "none";
+      });
+    </script>
 
     <!-- SKILLS SECTION -->
 <section class="skills" id="skills">
